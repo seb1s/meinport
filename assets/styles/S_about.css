@@ -1,0 +1,128 @@
+body{
+    background-color: #181818;
+    margin: 0;
+    height: 130vh;
+    overflow-x: hidden;
+}
+.scene{
+    position: absolute;
+    width: 100%;
+    height: 650px;
+    background-image: linear-gradient(20deg,rgb(19, 37, 116), rgb(2, 8, 26));
+    z-index: -11;
+}
+
+.scene i{
+    position: absolute;
+    background: #fff;
+    border-radius: 50%; 
+    z-index: -1;
+    animation: stars 2s infinite ease-in-out;
+}
+.scene a{
+    position: absolute;
+    background-image: linear-gradient(90deg,white,rgba(255, 255, 255, 0));
+    border-radius: 10px;
+    box-shadow: 0 0 50px white;
+    animation: fallingstar 1s ease-in-out infinite;
+}
+.section-divider{
+    position: absolute;
+    top: 500px;
+    background: #181818;
+    width: 150%;
+    height: 500px;
+    border-top: 1px solid #3b3b3b;
+    transform: rotate(-3deg);
+}
+.circle{
+    position: relative;
+    top: 250px;
+    border: 1px solid #3b3b3b;
+    background-color: #181818;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    z-index: 2;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+.circle img{
+    position: relative;
+    padding: 10px 10px;
+    width: 780px;
+    height: 780px;
+    border-radius: 50%;
+}
+.card{
+    background-color: #00000085;
+    position: relative;
+    margin: auto;
+    top: -300px;
+    border: 1px solid #ffffff;
+    width: 550px;
+    height: 700px;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    border-radius: 45px;
+    z-index: 1;
+}
+.card h1{
+    font-family: lex;
+    color: #fff;
+    text-align: center;
+}
+.card p{
+    font-family: lex;
+    color: #fff;
+    text-align: center;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #808080;
+    
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555555;
+}
+
+@font-face {
+    font-family: lex;
+    src: url(/assets/fonts/Lexend-ExtraLight.ttf);
+}
+@keyframes stars {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    10%,90%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+@keyframes fallingstar {
+    0% {
+        opacity: 0;
+        transform: rotateZ(-30deg) translateX(1000px);
+    }
+    30%,70%{
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(200px) rotateZ(-30deg);
+    }
+}

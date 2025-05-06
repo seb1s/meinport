@@ -1,0 +1,25 @@
+.navbar{
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+.navbar li{
+  display: inline;
+}
+.navbar a{
+  text-decoration: none;
+  color: white;
+  font-family: lex;
+  background-color: #181818;
+  padding: 10px 20px;
+  border: 1px solid #3b3b3b;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+.navbar a.active{
+  filter: invert(100%);
+}
+.navbar a:hover{
+  opacity: 75%;
+}
