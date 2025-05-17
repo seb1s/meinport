@@ -5,7 +5,7 @@ function stars(){
     while(i < count){
         let star = document.createElement("i");
         let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.floor(Math.random() * 1000);
+        let y = Math.floor(Math.random() * 550);
         let duration = Math.random() * 10;
         let size = Math.random() * 0.6;
 
@@ -16,7 +16,6 @@ function stars(){
 
         star.style.animationDuration = 10+duration+'s';
         star.style.animationDelay = duration+'s';
-
         scene.appendChild(star);
         i++
     }
@@ -24,13 +23,13 @@ function stars(){
 stars();
 
 function fallingstar(){
-    let count = 5;
+    let count = 10;
     let scene = document.querySelector('.scene');
     let a = 0;
     while(a < count){
         let star = document.createElement("a");
         let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.floor(Math.random() * 1000);
+        let y = Math.floor(Math.random() * 550);
         let duration = Math.random() * 2;
         let size = Math.random() * 1;
 

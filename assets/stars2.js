@@ -5,7 +5,7 @@ function stars2(){
     while(i < count){
         let star = document.createElement("i");
         let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.floor(Math.random() * 650);
+        let y = Math.floor(Math.random() * 550);
         let duration = Math.random() * 10;
         let size = Math.random() * 0.6;
 
@@ -29,7 +29,7 @@ function fallingstar(){
     while(a < count){
         let star = document.createElement("a");
         let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.floor(Math.random() * 1000);
+        let y = Math.floor(Math.random() * 550);
         let duration = Math.random() * 2;
         let size = Math.random() * 1;
 

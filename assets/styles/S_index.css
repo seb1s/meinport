@@ -4,45 +4,363 @@ body{
     height: 300vh;
     overflow-x: hidden;
 }
-.title1{
-    position: absolute;
-    color: #fff;
-    font-size: 150px;
-    left: 5%;
-    top: 400px;
-    font-family: lex;
-    text-shadow: 0 0 60px #9c9c9c;
-}
+    .title1{
+        position: absolute;
+        color: #fff;
+        font-size: 150px;
+        left: 5%;
+        top: 150px;
+        font-family: lex;
+        text-shadow: 0 0 30px #ffffff85;
+    }
 .scene{
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 1000px;
-    background-image: linear-gradient(20deg,rgb(19, 37, 116), rgb(2, 8, 26));
+    height: 550px;
+    background-image: linear-gradient(20deg,rgb(22, 37, 114), rgb(2, 8, 26));
     z-index: -11;
 }
-.scene i{
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: stars 2s infinite ease-in-out;
-}
-.scene a{
-    position: absolute;
-    background-image: linear-gradient(90deg,white,rgba(255, 255, 255, 0));
-    border-radius: 10px;
-    box-shadow: 0 0 50px white;
-    animation: fallingstar 1s ease-in-out infinite;
-}
+    .scene i{
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: stars 2s infinite ease-in-out;
+    }
+    .scene a{
+        position: absolute;
+        background-image: linear-gradient(90deg,white,rgba(255, 255, 255, 0));
+        border-radius: 10px;
+        box-shadow: 0 0 50px white;
+        animation: fallingstar 1s ease-in-out infinite;
+    }
 .section-divider{
     position: absolute;
-    top: 900px;
-    background: #181818;
+    top: 441px;
+    background-image: linear-gradient(45deg,#181818,#1d1d1d);
+    left: -100px;
     width: 150%;
-    height: 800px;
+    height: 1900px;
     border-top: 1px solid #3b3b3b;
     border-bottom: 1px solid #3b3b3b;
-    transform: rotate(-3deg);
+    transform: rotate(-3.5deg);
 }
+.info{
+    position: relative;
+    top: 550px;
+    font-family: lex;
+    color: #ffffff;
+    text-align: center;
+}
+    .info h3{
+        font-size: 44px;
+    }
+    .info p{
+        font-size: 20px;
+        padding: 0 500px;
+        font-style: oblique;
+    }
+        .line{
+            height: 7px;
+            border: 1px solid #3b3b3b;
+            border-radius: 5px;
+            margin: 50px 600px 0 600px;
+        }
+.skill-cards{
+    position: relative;
+    justify-content: center;
+    top: 610px;
+    display: flex;
+    flex-direction: row;
+    gap: 200px;
+}
+    .skill-cards .card{
+        text-align: center;
+        width: 400px;
+        height: 300px;
+        border-radius: 20px;
+        color: #fff;
+        font-family: lex;
+        border: 1px solid #3b3b3b;
+        transform-style: preserve-3d;
+        transform: perspective(1000px);
+        box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.26);
+    }
+        #card1{
+            background-image: linear-gradient(-125deg,#181818,#1d1d1d);
+        }
+        #card2{
+            background-image: linear-gradient(125deg,#181818,#1d1d1d);
+        }
+        #card3{
+            background-image: linear-gradient(-45deg,#181818,#1d1d1d);
+        }
+        #card4{
+            background-image: linear-gradient(45deg,#181818,#1d1d1d);
+        }
+        .card-content{
+            transform: translateZ(30px);
+        }
+        /*KARTA 1*/
+        .skill-cards .card .c1{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 50px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c1::before{
+                content: '';
+                background-color: #fff;
+                width: 150px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c1::after{
+                content: 'Zkušenost';
+                position: absolute;
+                top: -24px;
+            }
+        .skill-cards .card .c2{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 80px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c2::before{
+                content: '';
+                background-color: #fff;
+                width: 140px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c2::after{
+                content: 'Pochopení';
+                position: absolute;
+                top: -24px; 
+            }
+        /*KONEC KARTY 1*/
+        /*Karta 2*/
+        .skill-cards .card .c3{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 50px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c3::before{
+                content: '';
+                background-color: #fff;
+                width: 100px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c3::after{
+                content: 'Zkušenost';
+                position: absolute;
+                top: -24px;
+            }
+        .skill-cards .card .c4{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 80px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c4::before{
+                content: '';
+                background-color: #fff;
+                width: 80px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c4::after{
+                content: 'Pochopení';
+                position: absolute;
+                top: -24px; 
+            }
+        /*KONEC KARTY 2*/
+        /* KARTA 3*/
+        .skill-cards .card .c5{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 50px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c5::before{
+                content: '';
+                background-color: #fff;
+                width: 220px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c5::after{
+                content: 'Zkušenost';
+                position: absolute;
+                top: -24px;
+            }
+        .skill-cards .card .c6{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 80px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c6::before{
+                content: '';
+                background-color: #fff;
+                width: 200px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c6::after{
+                content: 'Pochopení';
+                position: absolute;
+                top: -24px; 
+            }
+        /*KONEC KARTY 3*/
+        /* KARTA 4*/
+        .skill-cards .card .c7{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 50px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c7::before{
+                content: '';
+                background-color: #fff;
+                width: 20px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c7::after{
+                content: 'Zkušenost';
+                position: absolute;
+                top: -24px;
+            }
+        .skill-cards .card .c8{
+            position: relative;
+            display: flex;
+            justify-self: center;
+            top: 80px;
+            border-radius: 10px;
+            background: #0c0c0c;
+            border: 1px solid #3b3b3b;
+            width: 300px;
+            height: 20px;
+        }
+            .skill-cards .card .c8::before{
+                content: '';
+                background-color: #fff;
+                width: 20px;
+                border-radius: 10px;
+            }
+            .skill-cards .card .c8::after{
+                content: 'Pochopení';
+                position: absolute;
+                top: -24px; 
+            }
+        /*KONEC KARTY 4*/
+.project-section{
+    position: relative;
+    top: 700px;
+}
+    .project-text{
+        text-align: center;
+        color: #ffffff;
+        font-family: lex;
+    }
+        .line2{
+            position: relative;
+            top: 0px;
+            height: 7px;
+            border: 1px solid #3b3b3b;
+            border-radius: 5px;
+            margin: 50px 1050px 0 1050px;
+        }
+    .project-showcase{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        position: relative;
+        top: 100px;
+        gap: 120px;
+    }
+        .project-showcase .project-cards{
+            width: 470px;
+            height: 640px;
+            border: 1px solid #3b3b3b;
+            border-radius: 20px;
+            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.425);
+        }
+            #p-card1{
+                transform: perspective(1000px)rotateY(-30deg)translateZ(-230px);
+                transition: 1s;
+            }
+            #p-card2{
+                transform: perspective(1000px)rotateY(-10deg);
+                transition: 1s;
+            }
+            #p-card3{
+                transform: perspective(1000px)rotateY(10deg);
+                transition: 1s;
+            }
+            #p-card4{
+                transform: perspective(1000px)rotateY(30deg)translateZ(-230px);
+                transition: 1s;
+            }
+
+            #p-card1:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+            }
+            #p-card2:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+            }
+            #p-card3:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+                
+            }
+            #p-card4:hover{
+                transform: rotateY(0)translateZ(0);
+                height: 1000px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -64,8 +382,9 @@ html{
 }
 @font-face {
     font-family: lex;
-    src: url(/assets/fonts/Lexend-ExtraLight.ttf);
+    src: url(/assets/fonts/Montserrat-ExtraLight.ttf);
 }
+
   
 @keyframes stars {
     0% {

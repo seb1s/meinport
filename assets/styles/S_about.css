@@ -35,47 +35,6 @@ body{
     border-top: 1px solid #3b3b3b;
     transform: rotate(-3deg);
 }
-.circle{
-    position: relative;
-    top: 250px;
-    border: 1px solid #3b3b3b;
-    background-color: #181818;
-    width: 800px;
-    height: 800px;
-    border-radius: 50%;
-    z-index: 2;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-}
-.circle img{
-    position: relative;
-    padding: 10px 10px;
-    width: 780px;
-    height: 780px;
-    border-radius: 50%;
-}
-.card{
-    background-color: #00000085;
-    position: relative;
-    margin: auto;
-    top: -300px;
-    border: 1px solid #ffffff;
-    width: 550px;
-    height: 700px;
-    box-shadow: 0 0 10px rgb(0, 0, 0);
-    border-radius: 45px;
-    z-index: 1;
-}
-.card h1{
-    font-family: lex;
-    color: #fff;
-    text-align: center;
-}
-.card p{
-    font-family: lex;
-    color: #fff;
-    text-align: center;
-
-}
 html{
     scroll-behavior: smooth;
 }
@@ -98,7 +57,7 @@ html{
 
 @font-face {
     font-family: lex;
-    src: url(/assets/fonts/Lexend-ExtraLight.ttf);
+    src: url(/assets/fonts/Montserrat-ExtraLight.ttf);
 }
 @keyframes stars {
     0% {
