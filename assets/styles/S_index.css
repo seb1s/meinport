@@ -1,24 +1,30 @@
 body{
-    background-color: #181818;
+    background-color: var(--site-1PC);
     margin: 0;
     height: 300vh;
     overflow-x: hidden;
 }
+:root{
+    --site-1PC: #101010;
+    --site-Glare2PC: #101010;
+    --site-borders: #202020;
+}
     .title1{
         position: absolute;
         color: #fff;
-        font-size: 150px;
+        text-align: center;
+        font-size: 160px;
         left: 5%;
-        top: 150px;
+        top: 270px;
         font-family: lex;
-        text-shadow: 0 0 30px #ffffff85;
+        text-shadow: 0 0 20px #ffffffb2;
     }
 .scene{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 550px;
+    height: 950px;
     background-image: linear-gradient(20deg,rgb(22, 37, 114), rgb(2, 8, 26));
     z-index: -11;
 }
@@ -37,40 +43,40 @@ body{
     }
 .section-divider{
     position: absolute;
-    top: 441px;
-    background-image: linear-gradient(45deg,#181818,#1d1d1d);
+    top: 840px;
+    background-image: linear-gradient(45deg,var(--site-1PC),var(--site-Glare2PC));
     left: -100px;
     width: 150%;
-    height: 1900px;
-    border-top: 1px solid #3b3b3b;
-    border-bottom: 1px solid #3b3b3b;
-    transform: rotate(-3.5deg);
+    height: 2000px;
+    border-top: 1px solid var(--site-borders);
+    border-bottom: 1px solid var(--site-borders);
+    transform: rotate(-2.5deg);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
 }
 .info{
     position: relative;
-    top: 550px;
-    font-family: lex;
+    left: 195px;
+    top: 450px;
     color: #ffffff;
-    text-align: center;
+    text-shadow: 0 0 20px #ffffffb2;
 }
-    .info h3{
-        font-size: 44px;
-    }
-    .info p{
+.info::before{
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: #ffffff;
+    top: -15px;
+    width: 1300px;
+}
+    .info pre{
         font-size: 20px;
-        padding: 0 500px;
         font-style: oblique;
+        font-family: lex;
     }
-        .line{
-            height: 7px;
-            border: 1px solid #3b3b3b;
-            border-radius: 5px;
-            margin: 50px 600px 0 600px;
-        }
 .skill-cards{
     position: relative;
     justify-content: center;
-    top: 610px;
+    top: 810px;
     display: flex;
     flex-direction: row;
     gap: 200px;
@@ -82,22 +88,22 @@ body{
         border-radius: 20px;
         color: #fff;
         font-family: lex;
-        border: 1px solid #3b3b3b;
+        border: 1px solid var(--site-borders);
         transform-style: preserve-3d;
         transform: perspective(1000px);
         box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.26);
     }
         #card1{
-            background-image: linear-gradient(-125deg,#181818,#1d1d1d);
+            background-image: linear-gradient(-125deg,var(--site-1PC),var(--site-Glare2PC));
         }
         #card2{
-            background-image: linear-gradient(125deg,#181818,#1d1d1d);
+            background-image: linear-gradient(125deg,var(--site-1PC),var(--site-Glare2PC));
         }
         #card3{
-            background-image: linear-gradient(-45deg,#181818,#1d1d1d);
+            background-image: linear-gradient(-45deg,var(--site-1PC),var(--site-Glare2PC));
         }
         #card4{
-            background-image: linear-gradient(45deg,#181818,#1d1d1d);
+            background-image: linear-gradient(45deg,var(--site-1PC),var(--site-Glare2PC));
         }
         .card-content{
             transform: translateZ(30px);
@@ -110,7 +116,7 @@ body{
             top: 50px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -132,7 +138,7 @@ body{
             top: 80px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -156,7 +162,7 @@ body{
             top: 50px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -178,7 +184,7 @@ body{
             top: 80px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -202,7 +208,7 @@ body{
             top: 50px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -224,7 +230,7 @@ body{
             top: 80px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -248,7 +254,7 @@ body{
             top: 50px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -270,7 +276,7 @@ body{
             top: 80px;
             border-radius: 10px;
             background: #0c0c0c;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             width: 300px;
             height: 20px;
         }
@@ -288,7 +294,7 @@ body{
         /*KONEC KARTY 4*/
 .project-section{
     position: relative;
-    top: 700px;
+    top: 900px;
 }
     .project-text{
         text-align: center;
@@ -299,7 +305,7 @@ body{
             position: relative;
             top: 0px;
             height: 7px;
-            border: 1px solid #3b3b3b;
+            border: 1px solid var(--site-borders);
             border-radius: 5px;
             margin: 50px 1050px 0 1050px;
         }
@@ -314,7 +320,6 @@ body{
         .project-showcase .project-cards{
             width: 470px;
             height: 640px;
-            border: 1px solid #3b3b3b;
             border-radius: 20px;
             box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.425);
         }
@@ -384,7 +389,10 @@ html{
     font-family: lex;
     src: url(/assets/fonts/Montserrat-ExtraLight.ttf);
 }
-
+@font-face {
+    font-family: lexB;
+    src: url(/assets/fonts/Montserrat-Thin.ttf);
+}
   
 @keyframes stars {
     0% {

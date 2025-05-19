@@ -5,7 +5,7 @@ function stars(){
     while(i < count){
         let star = document.createElement("i");
         let x = Math.floor(Math.random() * window.innerWidth);
-        let y = Math.floor(Math.random() * 550);
+        let y = Math.floor(Math.random() * 950);
         let duration = Math.random() * 10;
         let size = Math.random() * 0.6;
 
