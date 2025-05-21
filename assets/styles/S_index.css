@@ -4,20 +4,43 @@ body{
     height: 300vh;
     overflow-x: hidden;
 }
-:root{
-    --site-1PC: #101010;
-    --site-Glare2PC: #101010;
-    --site-borders: #202020;
+    :root{
+        --site-1PC: #101010;
+        --site-Glare2PC: #101010;
+        --site-borders: #202020;
+        --light-font: Light;
+        --bold-font: Bold;
+        --lightItal-font: LightItal;
+    }
+.title1{
+    position: absolute;
+    color: #fff;
+    top: 180px;
+    width: 100%;
+    text-align: center;
 }
-    .title1{
-        position: absolute;
-        color: #fff;
-        text-align: center;
-        font-size: 160px;
-        left: 5%;
-        top: 270px;
-        font-family: lex;
-        text-shadow: 0 0 20px #ffffffb2;
+    .title1 div{
+        text-align: center
+    }
+    .title1 h4{
+        font-family: var(--bold-font);
+        font-size: 140px;
+    }
+    .title1 p{
+        position: relative;
+        top: -190px;
+        font-size: 20px;
+        font-family: var(--lightItal-font);
+    }
+    .title-divider{
+        position: relative;
+        top: -170px;
+        height: 1px;
+        display: flex;
+        justify-self: center;
+        width: 600px;
+        background: #fff;
+        margin: 0 200px 0 200px;
     }
 .scene{
     position: absolute;
@@ -25,9 +48,18 @@ body{
     left: 0;
     width: 100%;
     height: 950px;
-    background-image: linear-gradient(20deg,rgb(22, 37, 114), rgb(2, 8, 26));
+    background:black;
     z-index: -11;
 }
+    .scene::before{
+        content: '';
+        position: absolute;
+        inset: 35% 10% -25% 10%;
+        border-radius: 20%;
+        filter: blur(200px) grayscale(0.2);
+        opacity: 0.5;
+        background-image: linear-gradient(to right,rgb(53, 56, 204),rgb(21, 139, 143)80%);
+    }
     .scene i{
         position: absolute;
         background: #fff;
@@ -43,51 +75,31 @@ body{
     }
 .section-divider{
     position: absolute;
-    top: 840px;
+    top: 900px;
     background-image: linear-gradient(45deg,var(--site-1PC),var(--site-Glare2PC));
     left: -100px;
     width: 150%;
     height: 2000px;
     border-top: 1px solid var(--site-borders);
     border-bottom: 1px solid var(--site-borders);
-    transform: rotate(-2.5deg);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
 }
-.info{
-    position: relative;
-    left: 195px;
-    top: 450px;
-    color: #ffffff;
-    text-shadow: 0 0 20px #ffffffb2;
-}
-.info::before{
-    content: '';
-    position: absolute;
-    height: 1px;
-    background-color: #ffffff;
-    top: -15px;
-    width: 1300px;
-}
-    .info pre{
-        font-size: 20px;
-        font-style: oblique;
-        font-family: lex;
-    }
 .skill-cards{
     position: relative;
     justify-content: center;
-    top: 810px;
+    top: 1010px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: 200px;
 }
     .skill-cards .card{
         text-align: center;
         width: 400px;
-        height: 300px;
+        height: 500px;
         border-radius: 20px;
         color: #fff;
-        font-family: lex;
+        font-family: var(--light-font);
         border: 1px solid var(--site-borders);
         transform-style: preserve-3d;
         transform: perspective(1000px);
@@ -107,6 +119,10 @@ body{
         }
         .card-content{
             transform: translateZ(30px);
+        }
+        .skill-bars{
+            position: relative;
+            top: 200px;
         }
         /*KARTA 1*/
         .skill-cards .card .c1{
@@ -294,12 +310,12 @@ body{
         /*KONEC KARTY 4*/
 .project-section{
     position: relative;
-    top: 900px;
+    top: 1100px;
 }
     .project-text{
         text-align: center;
         color: #ffffff;
-        font-family: lex;
+        font-family: var(--light-font);
     }
         .line2{
             position: relative;
@@ -313,6 +329,7 @@ body{
         display: flex;
         flex-direction: row;
         justify-self: center;
+        flex-wrap: wrap;
         position: relative;
         top: 100px;
         gap: 120px;
@@ -386,14 +403,21 @@ html{
     background: #555555;
 }
 @font-face {
-    font-family: lex;
-    src: url(/assets/fonts/Montserrat-ExtraLight.ttf);
+    font-family: Bold;
+    src: url(/assets/fonts/Satoshi-Bold.otf);
 }
 @font-face {
-    font-family: lexB;
-    src: url(/assets/fonts/Montserrat-Thin.ttf);
+    font-family: Light;
+    src: url(/assets/fonts/Satoshi-Light.otf);
 }
-  
+@font-face {
+    font-family: luxus;
+    src: url(/assets/fonts/Kalam-Light.ttf);
+}
+@font-face {
+    font-family: LightItal;
+    src: url(/assets/fonts/Satoshi-LightItalic.otf);
+}
 @keyframes stars {
     0% {
         opacity: 0;
