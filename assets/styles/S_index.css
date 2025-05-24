@@ -1,22 +1,21 @@
 body{
     background-color: var(--site-1PC);
     margin: 0;
-    height: 300vh;
+    height: 4000px;
     overflow-x: hidden;
 }
     :root{
-        --site-1PC: #101010;
+        --site-1PC: #000000;
         --site-Glare2PC: #101010;
-        --site-borders: #202020;
+        --site-borders: #ffffff;
         --light-font: Light;
         --bold-font: Bold;
         --lightItal-font: LightItal;
     }
 .title1{
-    position: absolute;
-    color: #fff;
-    top: 180px;
-    width: 100%;
+    position: relative;
+    color: #ffffff;
+    top: 130px;
     text-align: center;
 }
     .title1 div{
@@ -24,70 +23,180 @@ body{
     }
     .title1 h4{
         font-family: var(--bold-font);
-        font-size: 140px;
+        font-size: 150px;
     }
-    .title1 p{
+    .title1 p:nth-child(2){
         position: relative;
-        top: -190px;
+        top: -400px;
         font-size: 20px;
         font-family: var(--lightItal-font);
     }
-    .title-divider{
+    .title1 p:nth-child(3){
         position: relative;
-        top: -170px;
-        height: 1px;
+        top: -240px;
         display: flex;
         justify-self: center;
-        width: 600px;
-        background: #fff;
-        margin: 0 200px 0 200px;
+        font-size: 20px;
+        max-width: 600px;
+        font-family: var(--lightItal-font);
     }
+    .title1::before{
+        content: '';
+        position: relative;
+        top: 540px;
+        display: flex;
+        justify-self: center;
+        left: 0;
+        background-color: #fff;
+        width: 800px;
+        height: 1px;
+    }
+.info-cards{
+    position: relative;
+    top: 50px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 600px;
+}
+    .i-card-content{
+        color: #ffffff;
+    }
+        .i-card-content h4{
+            font-size: 40px;
+            text-align: center;
+            font-family: var(--bold-font);
+        }
+        .i-card-content a{
+            color: #ffffff;
+            text-decoration: none;
+            font-family: var(--light-font);
+        }
+        .i-card-content p{
+            font-family: var(--light-font);
+            font-size: large;
+        }
+        .i-card-content .github::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/github-mark-white.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+        }
+        .i-card-content .email::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/mail_40dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+        }
+        .i-card-content .home::before{
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/apartment_40dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+        }
 .scene{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 950px;
+    height: 1300px;
     background:black;
-    z-index: -11;
+    z-index: -12;
 }
-    .scene::before{
-        content: '';
-        position: absolute;
-        inset: 35% 10% -25% 10%;
-        border-radius: 20%;
-        filter: blur(200px) grayscale(0.2);
-        opacity: 0.5;
-        background-image: linear-gradient(to right,rgb(53, 56, 204),rgb(21, 139, 143)80%);
-    }
     .scene i{
         position: absolute;
         background: #fff;
         border-radius: 50%;
         animation: stars 2s infinite ease-in-out;
     }
-    .scene a{
+    .scene::before{
+        content: '';
         position: absolute;
-        background-image: linear-gradient(90deg,white,rgba(255, 255, 255, 0));
-        border-radius: 10px;
-        box-shadow: 0 0 50px white;
-        animation: fallingstar 1s ease-in-out infinite;
+        inset: 25% 10% 25% 10%;
+        border-radius: 30%;
+        filter: blur(200px) grayscale(0.2);
+        opacity: 0.5;
+        background-image: linear-gradient(to right,rgb(53, 56, 204),rgb(21, 139, 143)80%);
     }
-.section-divider{
-    position: absolute;
-    top: 900px;
-    background-image: linear-gradient(45deg,var(--site-1PC),var(--site-Glare2PC));
-    left: -100px;
-    width: 150%;
-    height: 2000px;
-    border-top: 1px solid var(--site-borders);
-    border-bottom: 1px solid var(--site-borders);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.438);
+
+
+    
+.project-section{
+    position: relative;
+    top: -300px;
 }
+    .project-text{
+        text-align: center;
+        color: #ffffff;
+        font-family: var(--light-font);
+    }
+        .line2{
+            position: relative;
+            top: 0px;
+            height: 1px;
+            background: #ffffff;
+            border-radius: 5px;
+            margin: 50px 1050px 0 1050px;
+        }
+    .project-showcase{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        flex-wrap: wrap;
+        position: relative;
+        top: 100px;
+        gap: 120px;
+    }
+        .project-showcase .project-cards{
+            width: 470px;
+            height: 640px;
+            border-radius: 20px;
+        }
+            #p-card1{
+                transform: perspective(1000px)rotateY(-30deg)translateZ(-230px);
+                transition: 1s;
+            }
+            #p-card2{
+                transform: perspective(1000px)rotateY(-10deg);
+                transition: 1s;
+            }
+            #p-card3{
+                transform: perspective(1000px)rotateY(10deg);
+                transition: 1s;
+            }
+            #p-card4{
+                transform: perspective(1000px)rotateY(30deg)translateZ(-230px);
+                transition: 1s;
+            }
+
+            #p-card1:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+            }
+            #p-card2:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+            }
+            #p-card3:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+                
+            }
+            #p-card4:hover{
+                transform: rotateY(0)translateZ(0)scale(1.1);
+                height: 1000px;
+            }
 .skill-cards{
     position: relative;
     justify-content: center;
-    top: 1010px;
+    top: 1310px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -100,7 +209,6 @@ body{
         border-radius: 20px;
         color: #fff;
         font-family: var(--light-font);
-        border: 1px solid var(--site-borders);
         transform-style: preserve-3d;
         transform: perspective(1000px);
         box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.26);
@@ -308,70 +416,6 @@ body{
                 top: -24px; 
             }
         /*KONEC KARTY 4*/
-.project-section{
-    position: relative;
-    top: 1100px;
-}
-    .project-text{
-        text-align: center;
-        color: #ffffff;
-        font-family: var(--light-font);
-    }
-        .line2{
-            position: relative;
-            top: 0px;
-            height: 7px;
-            border: 1px solid var(--site-borders);
-            border-radius: 5px;
-            margin: 50px 1050px 0 1050px;
-        }
-    .project-showcase{
-        display: flex;
-        flex-direction: row;
-        justify-self: center;
-        flex-wrap: wrap;
-        position: relative;
-        top: 100px;
-        gap: 120px;
-    }
-        .project-showcase .project-cards{
-            width: 470px;
-            height: 640px;
-            border-radius: 20px;
-            box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.425);
-        }
-            #p-card1{
-                transform: perspective(1000px)rotateY(-30deg)translateZ(-230px);
-                transition: 1s;
-            }
-            #p-card2{
-                transform: perspective(1000px)rotateY(-10deg);
-                transition: 1s;
-            }
-            #p-card3{
-                transform: perspective(1000px)rotateY(10deg);
-                transition: 1s;
-            }
-            #p-card4{
-                transform: perspective(1000px)rotateY(30deg)translateZ(-230px);
-                transition: 1s;
-            }
-
-            #p-card1:hover{
-                transform: rotateY(0)translateZ(0)scale(1.1);
-            }
-            #p-card2:hover{
-                transform: rotateY(0)translateZ(0)scale(1.1);
-            }
-            #p-card3:hover{
-                transform: rotateY(0)translateZ(0)scale(1.1);
-                
-            }
-            #p-card4:hover{
-                transform: rotateY(0)translateZ(0);
-                height: 1000px;
-            }
-
 
 
 
