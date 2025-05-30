@@ -1,48 +1,76 @@
 body{
-    background-color: #181818;
+    background-color: var(--site-1PC);
     margin: 0;
-    height: 130vh;
+    height: 4000px;
     overflow-x: hidden;
 }
-.title1{
-    position: absolute;
-    color: #fff;
-    font-size: 150px;
-    left: 5%;
-    top: 400px;
-    font-family: lex;
-    text-shadow: 0 0 60px #9c9c9c;
-}
+    :root{
+        --site-1PC: #000000;
+        --site-Glare2PC: #101010;
+        --site-borders: #ffffff;
+        --light-font: Light;
+        --bold-font: Bold;
+        --lightItal-font: LightItal;
+    }
 .scene{
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 1000px;
-    background-image: linear-gradient(20deg,rgb(19, 37, 116), rgb(2, 8, 26));
-    z-index: -11;
+    height: 1300px;
+    background:black;
+    z-index: -12;
+}
+    .scene i{
+        position: absolute;
+        background: #fff;
+        border-radius: 50%;
+        animation: stars 2s infinite ease-in-out;
+    }
+    .scene::before{
+        content: '';
+        position: absolute;
+        inset: 25% 10% 25% 10%;
+        border-radius: 30%;
+        filter: blur(200px) grayscale(0.2);
+        opacity: 0.5;
+        background-image: linear-gradient(to right,rgb(53, 56, 204),rgb(21, 139, 143)80%);
+    }
+.project-holder{
+    position: relative;
+    top: 200px;
+}
+.projects-text{
+    color: #ffffff;
+    font-family: var(--bold-font);
+    font-size: 40px;
+    text-align: center;
+}
+.projects{
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 0 200px 0 200px;
+}
+.projects img{
+    border-radius: 20px;
+    width: 470px;
+    height: 640px;
 }
 
-.scene i{
-    position: absolute;
-    background: #fff;
-    border-radius: 50%;
-    animation: stars 2s infinite ease-in-out;
-}
-.scene a{
-    position: absolute;
-    background-image: linear-gradient(90deg,white,rgba(255, 255, 255, 0));
-    border-radius: 10px;
-    box-shadow: 0 0 50px white;
-    animation: fallingstar 1s ease-in-out infinite;
-}
-.section-divider{
-    position: absolute;
-    top: 900px;
-    background: #181818;
-    width: 150%;
-    height: 200px;
-    border-top: 1px solid #3b3b3b;
-    transform: rotate(-3deg);
-}
+
+
+
+
+
+
+
+
+
 html{
     scroll-behavior: smooth;
 }
@@ -63,8 +91,20 @@ html{
     background: #555555;
 }
 @font-face {
-    font-family: lex;
-    src: url(/assets/fonts/Montserrat-ExtraLight.ttf);
+    font-family: Bold;
+    src: url(/assets/fonts/Satoshi-Bold.otf);
+}
+@font-face {
+    font-family: Light;
+    src: url(/assets/fonts/Satoshi-Light.otf);
+}
+@font-face {
+    font-family: luxus;
+    src: url(/assets/fonts/Kalam-Light.ttf);
+}
+@font-face {
+    font-family: LightItal;
+    src: url(/assets/fonts/Satoshi-LightItalic.otf);
 }
 @keyframes stars {
     0% {
@@ -77,18 +117,5 @@ html{
     100% {
         opacity: 0;
         transform: translateY(-100px);
-    }
-}
-@keyframes fallingstar {
-    0% {
-        opacity: 0;
-        transform: rotateZ(-30deg) translateX(1000px);
-    }
-    30%,70%{
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translateY(200px) rotateZ(-30deg);
     }
 }
