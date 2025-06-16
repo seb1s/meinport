@@ -1,7 +1,7 @@
 body{
     background-color: var(--site-1PC);
     margin: 0;
-    height: 4000px;
+    height: 3400px;
     overflow-x: hidden;
 }
     :root{
@@ -324,30 +324,32 @@ html{
         gap: 20px;
     }
             #p-card1{
-                transform: perspective(1200px)rotateY(-40deg)translateZ(-150px);
+                transform: perspective(1200px)rotateY(-40deg)translateZ(-190px);
                 transition: 1s;
-                margin-right: 60px;
+                margin-right: 80px;
             }
             #p-card2{
                 transform: perspective(1000px)rotateY(-10deg);
                 transition: 1s;
+                z-index: 10;
             }
             #p-card3{
                 transform: perspective(1000px)rotateY(10deg);
                 transition: 1s;
+                z-index: 10;
             }
             #p-card4{
-                transform: perspective(1000px)rotateY(40deg)translateZ(-150px);
+                transform: perspective(1200px)rotateY(40deg)translateZ(-190px);
                 transition: 1s;
-                margin-left: 60px;
+                margin-left: 80px;
             }
             #p-card4:hover{
                         transform: rotateY(0)translateZ(0)scale(1.1);
-                        height: 400px;
+                        height: 600px;
                     }
   .project-showcase .project-cards{
-            width: 210px;
-            height: 300px;
+            width: 250px;
+            height: 360px;
             border-radius: 10px;
         }
     .info-cards{
@@ -357,6 +359,6 @@ html{
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 400px;
+        gap: 500px;
     }
 }

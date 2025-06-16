@@ -1,0 +1,64 @@
+footer{
+    position: relative;
+    bottom: -1000px;
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+footer::before{
+    position: absolute;
+    content: '';
+    bottom: -100px;
+    background-color: #fff;
+    width: 800px;
+    height: 1px;
+
+}
+.footer-div a,p{
+    text-decoration: none;
+    color: #fff;
+    font-family: light;
+    font-size: 20px;
+}
+.footer-div .git::before{
+    content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/github-mark-white.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+}
+.footer-div .mail::before{
+    content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/mail_40dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+}
+.footer-div .ig::before{
+    content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/instagram-white-icon\ \(1\).png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+}
+.footer-div .tel::before{
+    content: '';
+            width: 20px;
+            height: 20px;
+            background: url(/assets/images/call_40dp_E3E3E3_FILL0_wght400_GRAD0_opsz40.png) no-repeat;
+            background-size: contain;
+            float: left;
+            margin-right: 10px;
+}
+@font-face {
+    font-family: Light;
+    src: url(/assets/fonts/Satoshi-Light.otf);
+}
