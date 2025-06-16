@@ -310,3 +310,53 @@ html{
         transform: translateY(200px) rotateZ(-30deg);
     }
 }
+
+
+
+@media only screen and (max-width: 1920px) {
+    .project-showcase{
+        display: flex;
+        flex-direction: row;
+        justify-self: center;
+        flex-wrap: wrap;
+        position: relative;
+        top: 100px;
+        gap: 20px;
+    }
+            #p-card1{
+                transform: perspective(1200px)rotateY(-40deg)translateZ(-150px);
+                transition: 1s;
+                margin-right: 60px;
+            }
+            #p-card2{
+                transform: perspective(1000px)rotateY(-10deg);
+                transition: 1s;
+            }
+            #p-card3{
+                transform: perspective(1000px)rotateY(10deg);
+                transition: 1s;
+            }
+            #p-card4{
+                transform: perspective(1000px)rotateY(40deg)translateZ(-150px);
+                transition: 1s;
+                margin-left: 60px;
+            }
+            #p-card4:hover{
+                        transform: rotateY(0)translateZ(0)scale(1.1);
+                        height: 400px;
+                    }
+  .project-showcase .project-cards{
+            width: 210px;
+            height: 300px;
+            border-radius: 10px;
+        }
+    .info-cards{
+        position: relative;
+        top: 100px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 400px;
+    }
+}
